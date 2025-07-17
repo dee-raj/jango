@@ -13,8 +13,8 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Employee
-        fields = ['id', 'emp_name', 'email', 'password',
-                  'is_active', 'created_at', 'updated_at']
+        fields = '__all__'
+        # fields = ['id', 'emp_name', 'email', 'password', 'is_active', 'created_at', 'updated_at']
         extra_kwargs = {
             'password': {'write_only': True},
             'created_at': {'read_only': True, 'format': '%Y-%m-%d %H:%M:%S'},
@@ -31,4 +31,6 @@ class EmployeeSerializer(serializers.ModelSerializer):
         if 'password' in validated_data:
             validated_data['password'] = make_password(
                 validated_data['password'])
+        else:
+            validated_data.pop('password', None)
         return super().update(instance, validated_data)
