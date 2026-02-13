@@ -9,6 +9,7 @@ class BaseResponse(Response):
         message,
         data=None,
         errors=None,
+        code:200
         status_code=status.HTTP_200_OK,
     ):
         payload = {
@@ -16,6 +17,7 @@ class BaseResponse(Response):
             "message": message,
             "data": data,
             "errors": errors,
+            "code":code,
         }
         super().__init__(payload, status=status_code)
 
