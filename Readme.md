@@ -1,4 +1,5 @@
 # Django Backend – Employee MS
+
 > Backend service built with **Django + Django REST Framework**, designed for **LAN development**, frontend integration, and future production deployment.
 
 
@@ -12,7 +13,6 @@ git clone <repo-url>
 cd django
 ```
 
----
 
 ### 2. Create Virtual Environment
 
@@ -30,7 +30,7 @@ python -m venv .denv
 source .denv/bin/activate
 ```
 
----
+
 
 ### 3. Install Dependencies
 
@@ -38,7 +38,7 @@ source .denv/bin/activate
 pip install -r requirements.txt
 ```
 
----
+
 
 ### 4. Environment Variables
 
@@ -59,7 +59,7 @@ ALLOWED_HOSTS=127.0.0.1,localhost,192.168.1.45
 CORS_ALLOWED_ORIGINS=http://localhost:3000,http://192.168.1.50:3000
 ```
 
----
+
 
 ### 5. Run Migrations
 
@@ -67,7 +67,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000,http://192.168.1.50:3000
 python manage.py migrate
 ```
 
----
+
 
 ### 6. Start Development Server (LAN Enabled)
 
